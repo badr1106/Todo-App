@@ -1,27 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './CheckBox.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./CheckBox.css";
 
-function CheckBox() {
+function CheckBox(props) {
   return (
-    <html>
-    <div >
-      <input type="checkbox" id="to-do" name="to-do" ></input>
-      <span> Happy </span>
-    </div>
-    <div>
-      <input type="checkbox" id="to-do" name="to-do" ></input>
-      <span> Sad </span>
-    </div>
-    <div>
-      <input type="checkbox" id="to-do" name="to-do" ></input>
-      <span> Angry </span>
-    </div>  
-    <div>
-      <input type="checkbox" id="to-do" name="to-do" ></input>
-      <span> Optimistic </span>
-    </div>
-    </html>
+    <>
+      <div className="checkbox-card">
+        <input type="checkBox" checked={props.item.completed} />
+        <h3>{props.item.text} </h3>
+      </div>
+    </>
   );
 }
 
